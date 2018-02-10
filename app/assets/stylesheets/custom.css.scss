@@ -21,11 +21,12 @@ body {
     min-height: 100%;
     width: auto;
     height: auto;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
 }
 
 div.mini-post {
-    margin-top: 30px
+    margin-top: 30px;
+    background:rgba(0,0,0,0.6);
 }
 
 #logo {
@@ -51,17 +52,13 @@ p a.btn.btn-lg:hover,p .btn-group-lg>a.btn:hover,p a.btn.btn-lg:active,p .btn-gr
     color: #0A0403
 }
 
-.footer {
-    background-color: #0A0403;
-    height: 50px;
-    padding: 10px
+.homepage-link:link,
+.homepage-link:visited,
+.homepage-link:hover,
+.homepage-link:active {
+    color:white !important ;
 }
 
-.footer-link:link,.footer-link:visited {
-    color: #ddd
-}
-
-.footer-link:hover,.footer-link:active {
-    color: #AE7047;
-    border-bottom: solid 2px
+.homepage-image {
+    margin-top: 15px;
 }

@@ -1,29 +1,36 @@
 <div class="container-fluid text-center">
-  <h1 class="heading-color">Welcome to my Recipes</h1>
-  <h2 class="heading-color">The best recipe sharing app!</h2>
+  <h1 class="heading-color">Welcome to My Recipes</h1>
   <p><%= link_to "Sign up or log in", "#", class: "btn btn-lg" %></p>
   <%= video_tag "video.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video" %>
-  
   <div class="row">
-    <div class="col-lg-4 mini-post">
-      <%= image_tag("homepage_1.png", size: "200x140", alt: "Pies", class: "img-rounded") %>
-        <h2>Sweet Perfection!</h2>
-        <p>Yummy pies !!!</p>
-      <p><a class="btn btn-lg" href="#" role="button">View details &raquo;</a></p>
-    </div>
+    <%= link_to '#', class: 'homepage-link' do %>
+      <div class="col-lg-4 form-group">
+        <div class="mini-post">
+          <%= image_tag("homepage_1.png", size: "200x140", alt: "Pies", class: "img-rounded homepage-image") %>
+          <h2>Sweet Perfection!</h2>
+          <p>Yummy pies !!!</p>
+        </div>
+      </div>
+    <% end %>
     
-    <div class="col-lg-4 mini-post">
-      <%= image_tag("homepage_2.png", size: "200x140", alt: "BBQ Wings", class: "img-rounded") %>
-      <h2>Hmmm, Wings anyone?</h2>
-      <p>Yummy wings !!!</p>
-      <p><a class="btn btn-lg" href="#" role="button">View details &raquo;</a></p>
-    </div>
+    <%= link_to '#', class: 'homepage-link' do %>
+      <div class="col-lg-4 form-group">
+        <div class="mini-post">
+          <%= image_tag("homepage_2.png", size: "200x140", alt: "BBQ Wings", class: "img-rounded homepage-image") %>
+          <h2>Hmmm, Wings anyone?</h2>
+          <p>Yummy wings !!!</p>
+        </div>
+      </div>
+    <% end %>
     
-    <div class="col-lg-4 mini-post">
-      <%= image_tag("homepage_3.png", size: "200x140", alt: "Food Platter", class: "img-rounded") %>
-      <h2>Healthy Meals!</h2>
-      <p>Yummy meals !!!</p>
-      <p><a class="btn btn-lg" href="#" role="button">View details &raquo;</a></p>
-    </div>
+    <%= link_to '#', class: 'homepage-link' do %>
+      <div class="col-lg-4 form-group">
+        <div class="mini-post">
+          <%= image_tag("homepage_3.png", size: "200x140", alt: "Food Platter", class: "img-rounded homepage-image") %>
+          <h2>Healthy Meals!</h2>
+          <p>Yummy meals !!!</p>
+        </div>
+      </div>
+    <% end %>
   </div><!-- /.row -->
 </div>
