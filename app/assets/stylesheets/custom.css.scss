@@ -3,10 +3,6 @@ $navbar-default-bg: black;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.center {
-  text-align: center;
-}
-
 body {
     color: #ddd;
     background-color: #ddd;
@@ -52,13 +48,19 @@ p a.btn.btn-lg:hover,p .btn-group-lg>a.btn:hover,p a.btn.btn-lg:active,p .btn-gr
     color: #0A0403
 }
 
-.homepage-link:link,
-.homepage-link:visited,
-.homepage-link:hover,
-.homepage-link:active {
-    color:white !important ;
-}
-
 .homepage-image {
     margin-top: 15px;
 }
+
+.homepage-link:link,
+.homepage-link:visited {
+    color:#ddd !important ;
+}
+
+.homepage-link:hover,
+.homepage-link:active {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+
