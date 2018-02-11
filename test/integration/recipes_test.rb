@@ -32,9 +32,25 @@ class RecipesTest < ActionDispatch::IntegrationTest
   
   test "create new valid recipe" do
     get new_recipe_path
+    assert_template 'recipes/new'
+    name_of_recipe = "valid recipe name"
+    description_of_recipe = "valid recipe description"
+    assert_difference 'Recipe.count', 1 do
+      post recipes_path, params: { recipe: { name: name_of_recipe, description: description_of_recipe}}
+    end
+    follow_redirect!
+    assert_match name_of_recipe.capitalize, response.body
+    assert_match description_of_recipe, response.body
   end
   
   test "reject invalid recipe submissions" do
     get new_recipe_path
+    assert_template 'recipes/new'
+    assert_no_difference 'Recipe.count' do
+      post recipes_path, params: { recipe: { name: " ", description: " " } }
+    end
+    assert_template 'recipes/new'
+    assert_select 'h2.panel-title'
+    assert_select 'div.panel-body'
   end
 end
