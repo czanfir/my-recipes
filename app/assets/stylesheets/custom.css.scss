@@ -3,11 +3,6 @@ $navbar-default-bg: black;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
-    color: #ddd;
-    background-color: #ddd;
-}
-
 .video {
     position: fixed;
     top: 50%;
@@ -48,6 +43,9 @@ p a.btn.btn-lg:hover,p .btn-group-lg>a.btn:hover,p a.btn.btn-lg:active,p .btn-gr
     color: #0A0403
 }
 
+.homepage-text-color {
+    color: #ddd;
+}
 .homepage-image {
     margin-top: 15px;
 }
