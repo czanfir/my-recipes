@@ -8,61 +8,70 @@ $navbar-default-bg: black;
 }
 
 .video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: -1;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
 }
 
 div.mini-post {
-    margin-top: 30px;
-    background:rgba(0,0,0,0.6);
+  margin-top: 30px;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 #logo {
-    float: left;
-    font-size: 1.7em;
-    color: #AE7047;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    font-weight: bold
+  float: left;
+  font-size: 1.7em;
+  color: #AE7047;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold
 }
 
-#logo:hover,ul.nav li:hover {
-    background-color: #ddd
+#logo:hover,
+ul.nav li:hover {
+  background-color: #ddd
 }
 
-p a.btn.btn-lg:link,p .btn-group-lg>a.btn:link,p a.btn.btn-lg:visited,p .btn-group-lg>a.btn:visited {
-    background-color: #0A0403;
-    color: #ddd
+.homepage-button:link,
+.homepage-button:visited,
+.submit-button,
+.submit-button.pressed {
+  background-color: #0A0403;
+  color: #ddd
 }
 
-p a.btn.btn-lg:hover,p .btn-group-lg>a.btn:hover,p a.btn.btn-lg:active,p .btn-group-lg>a.btn:active {
-    background-color: #ddd;
-    color: #0A0403
+.homepage-button:hover,
+.homepage-button:active,
+.submit-button:hover,
+.submit-button:active {
+  background-color: #ddd;
+  color: #0A0403
 }
+
 
 .homepage-text-color {
-    color: #ddd;
+  color: #ddd;
 }
+
 .homepage-image {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .homepage-link:link,
 .homepage-link:visited {
-    color:#ddd !important ;
+  color: #ddd !important;
 }
 
 .homepage-link:hover,
 .homepage-link:active {
-    font-weight: bold;
-    font-size: 110%;
+  font-weight: bold;
+  font-size: 110%;
 }
 
 .description {
@@ -70,10 +79,13 @@ p a.btn.btn-lg:hover,p .btn-group-lg>a.btn:hover,p a.btn.btn-lg:active,p .btn-gr
 }
 
 .well a {
-    color: #AE7047;
+  color: #AE7047;
 }
 
 .chef_info {
   margin-top: 10px;
 }
 
+.colormatch a {
+  color: #AE7047;
+}
