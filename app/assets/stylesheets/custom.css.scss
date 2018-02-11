@@ -3,6 +3,10 @@ $navbar-default-bg: black;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.center {
+  text-align: center;
+}
+
 .video {
     position: fixed;
     top: 50%;
@@ -61,4 +65,15 @@ p a.btn.btn-lg:hover,p .btn-group-lg>a.btn:hover,p a.btn.btn-lg:active,p .btn-gr
     font-size: 110%;
 }
 
+.description {
+  margin-top: 0;
+}
+
+.well a {
+    color: #AE7047;
+}
+
+.chef_info {
+  margin-top: 10px;
+}
 
