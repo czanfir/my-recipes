@@ -40,16 +40,16 @@ ul.nav li:hover {
 
 .homepage-button:link,
 .homepage-button:visited,
-.submit-button,
-.submit-button.pressed {
+.custom-button,
+.custom-button.pressed {
   background-color: #0A0403;
   color: #ddd
 }
 
 .homepage-button:hover,
 .homepage-button:active,
-.submit-button:hover,
-.submit-button:active {
+.custom-button:hover,
+.custom-button:active {
   background-color: #ddd;
   color: #0A0403
 }
