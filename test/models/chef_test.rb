@@ -60,14 +60,22 @@ class ChefTest < ActiveSupport::TestCase
     assert_equal mixed_email.downcase, @chef.reload.email 
   end
   
-   test "password should be present" do
+  test "password should be present" do
     @chef.password = @chef.password_confirmation = " "
     assert_not @chef.valid?
   end
   
-   test "password should be atleast 5 character" do
+  test "password should be atleast 5 character" do
     @chef.password = @chef.password_confirmation = "x" * 4
     assert_not @chef.valid?
+  end
+  
+ test "associated recipes should be destroyed" do
+    @chef.save
+    @chef.recipes.create!(name: "testing delete", description: "testing delete function")
+    assert_difference 'Recipe.count', -1 do
+      @chef.destroy
+    end
   end
   
 end
