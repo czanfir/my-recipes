@@ -9,5 +9,5 @@ class Chef < ApplicationRecord
   before_save { self.email = email.downcase }
   has_many :recipes
   has_secure_password
-  validates :password, presence: true, length: { minimum: 5 }
+  validates :password, presence: true, length: { minimum: 5 }, allow_nil: true
 end
