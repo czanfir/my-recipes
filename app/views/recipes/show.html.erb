@@ -55,19 +55,14 @@
   </div>
 <% end %>
 
-<% if !@recipe.comments.empty? %>
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <h3>Prior Comments: </h3>
-        <div id="messages">
-          <%= render partial: 'comments/comments', object: @comments %>
-        </div>
-    </div>
+<div class="row" id='xxxxxx'>
+  <div class="col-md-8 col-md-offset-2">
+    <h3 id="messages-header"><%= @recipe.comments.empty? ? "No Comments Yet!" : "Prior Comments: " %></h3>
+      <div id="messages">
+        <%= render partial: 'comments/comments', object: @comments unless @recipe.comments.empty? %>
+      </div>
   </div>
-<% else %>
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <h3>No Comments Yet!</h3>
-    </div>
-  </div>
-<% end %>
+</div>
+
+<!-- use this as to not overlap the footer with the no comment header-->
+<div class="row" style="min-height: 50px"></div> 
