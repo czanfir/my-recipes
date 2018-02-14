@@ -110,6 +110,11 @@ ul.nav li:hover {
 .badge-inverse {
   background-color: #333333;
 }
+
 .badge-inverse:hover {
   background-color: #1a1a1a;
+}
+
+.input_checkbox input {
+  width: auto !important;
 }
