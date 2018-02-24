@@ -18,7 +18,7 @@
 
 function scrollToBottom(){
   if($('#messages').length > 0) {
-    $("#messages").animate({ scrollTop: ($('#messages').prop("scrollHeight") + 100)}, 1000);
+      $("#messages").animate({ scrollTop: ($('#messages').prop("scrollHeight") + 10000)}, 1);
   }
 }
 
