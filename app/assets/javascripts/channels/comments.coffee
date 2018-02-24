@@ -9,4 +9,4 @@ App.comments = App.cable.subscriptions.create "CommentsChannel",
     # Called when there's incoming data on the websocket for this channel
     if $.trim($('messages').html()) == ''
       $('#messages-header').html 'Prior Comments: '
-    $("#messages").prepend(data)
+    $("#messages .comment-fix:first").prepend(data)
