@@ -14,6 +14,7 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require turbolinks
+//= require jquery_ujs
 //= require_tree .
 
 function scrollToBottom(){
@@ -22,6 +23,24 @@ function scrollToBottom(){
   }
 }
 
+function submitMessage(event){
+   event.preventDefault();
+   $('#new_message').submit();
+}
+
+$(document).on('keypress', '[data-behavior~=room_speaker]', function(event) {
+   if (event.keyCode == 13) {
+     submitMessage(event);
+   }
+});
+
+$(document).on('click', '[data-send~=message]', function(event) {
+   submitMessage(event);
+});
+
 $(document).on('turbolinks:load', function() {
+  $("#new_message").on("ajax:complete", function(e, data, status) {
+    $('#message_content').val('');
+  })
   scrollToBottom();
 });

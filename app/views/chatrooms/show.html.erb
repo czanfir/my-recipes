@@ -8,8 +8,8 @@
     <hr/>
     <div class="message-container">
       <%= form_for(@message, remote:true, :html => {class: "form-horizontal", role: "form"}) do |f| %>
-        <%= f.text_area :content, class: "form-control", placeholder: "Say something!" %>
-        <%= f.submit "Send", class: 'btn btn-lg custom-button' %>
+        <%= f.text_area :content, class: "form-control", data: { behavior: "room_speaker" }, placeholder: "Say something!" %>
+        <%= f.submit "Send", class: 'btn btn-lg custom-button', data: { send: "message" } %>
       <% end %>
     </div>
   </div>
