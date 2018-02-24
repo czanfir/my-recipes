@@ -48,12 +48,21 @@ class RecipesController < ApplicationController
   end
   
   def like
-    like = Like.create(like: params[:like], chef: current_chef, recipe: @recipe)
-    if like.valid?
-      flash[:success] = "You liked chef's #{current_chef.chefname} recipe #{@recipe.name}"
+    like = Like.find_by(chef:current_chef, recipe: @recipe)
+    if like
+      like_status = like.like
+      if like_status.to_s == params[:like]
+        flash[:success] = "You #{ if params[:like] == "true" then "unliked" else "stopped disliking" end } chef's #{current_chef.chefname} recipe #{@recipe.name}"
+        like.destroy
+      else
+        like.like = params[:like]
+        flash[:success] = "You #{ if params[:like] == "true" then "liked" else "disliked" end } chef's #{current_chef.chefname} recipe #{@recipe.name}"
+        like.save
+      end
       redirect_back fallback_location: root_path
     else
-      flash[:danger] = "You can only like/dislike a recipe once"
+      like = Like.create(like: params[:like], chef: current_chef, recipe: @recipe)
+      flash[:success] = "You #{ if params[:like] == "true" then "liked" else "disliked" end } chef's #{current_chef.chefname} recipe #{@recipe.name}"
       redirect_back fallback_location: root_path
     end
   end
