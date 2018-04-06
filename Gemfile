@@ -61,3 +61,5 @@ group :production do
   gem 'pg', '~> 0.21'
   gem 'redis', '~> 3.3'
 end
+
+ruby "2.5.0"
